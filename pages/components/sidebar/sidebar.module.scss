@@ -1,0 +1,60 @@
+@import "./../../../styles/variables.module.scss";
+/*
+$colors-violet-light: #8257e5;
+$colors-violet-dark: #633bbc;
+$colors-gray-900: #1e1e1e;
+$colors-gray-100: #e1e1e1;
+$colors-gray-600: #353333de;
+$colors-gray-dark;
+$colors-red-defalt: #ea0000;
+$colors-green-default: #62e557;
+$colors-white: #ffff;
+$fontFamily-Roboto: "Roboto", sans-serif;
+$fontFamily-rigtheous-cursive: "Righteous", cursive;
+$fontFamily-rigtheous-sans-serif: "Roboto", sans-serif;
+*/
+.Sidebar {
+  position: absolute;
+  width: 170px;
+  height: calc(100vh - 70px);
+  background-color: $colors-gray-900;
+  border-right: 2px solid $colors-gray-800;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  z-index: 8;
+  .itemsMovies {
+    padding: .6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    .ItemsList {
+      width: 95%;
+      border: 1px solid $colors-gray-600;
+      background-color: $colors-gray-800;
+      border-radius:3px;
+      padding: 0.4rem;
+      &:hover{
+        background-color: $colors-gray-900
+      }
+      .Link {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        color: $colors-gray-100;
+        text-decoration: none;
+        font-size: 1rem;
+        font-family: $fontFamily-Roboto;
+        gap: 0.5rem;
+        .iconLinkSideBar {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}

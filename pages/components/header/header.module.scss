@@ -1,0 +1,147 @@
+@import "../../../styles/variables.module.scss";
+/*
+$colors-violet-light: #8257e5;
+$colors-violet-dark: #633bbc;
+$colors-gray-900: #1e1e1e;
+$colors-gray-100: #e1e1e1;
+$colors-gray-600: #353333de;
+$colors-red-defalt: #ea0000;
+$colors-green-default: #62e557;
+$colors-white: #ffff;
+$fontFamily-Roboto: "Roboto", sans-serif;
+$fontFamily-rigtheous-cursive: "Righteous", cursive;
+$fontFamily-rigtheous-sans-serif: "Roboto", sans-serif;
+*/
+//-----------------header---------------------//
+.Header {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  padding: 1% 3%;
+  background-color: $colors-gray-900;
+  border-bottom: 2px solid $colors-gray-800;
+  .BtnActive {
+    background: none;
+    border: none;
+    cursor: pointer;
+    .iconBtn {
+      color: $colors-gray-100;
+      font-size: 2rem;
+      @media (max-width: 650px) {
+        font-size: 2.2em;
+      }
+    }
+  }
+  .ContainerItemsCenter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+    width: 100%;
+    .fakeLinkLogo {
+      .Logo {
+        width: 3.5rem;
+        @media (max-width: 730px) {
+          display: none;
+        }
+      }
+    }
+
+    .BoxInputToIcon {
+      position: relative;
+      width: 40%;
+      .InputSearchMovie {
+        border: 2px solid $colors-violet-dark;
+        background-color: $colors-gray-800;
+        width: 100%;
+        border-radius: 5px;
+        color: $colors-gray-100;
+        padding:.5rem 1rem;
+        font-weight: lighter;
+        font-family: $fontFamily-Roboto;
+        font-size: 1rem;
+      }
+      .IconSearch {
+        color: $colors-violet-light;
+        position: absolute;
+        right: 3%;
+        top: 15%;
+        cursor: pointer;
+      }
+    }
+
+    .Menu {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 1.3rem;
+      @media (max-width: 600px) {
+        gap: 0.4rem;
+      }
+      .MenuItem {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        &::after {
+          width: 2px;
+          height: 1.2rem;
+          background-color: $colors-violet-dark;
+          content: "";
+          display: flex;
+        }
+        &:nth-child(4) {
+          display: flex;
+          color: $colors-gray-100;
+          gap: 0.3rem;
+        }
+        .Link {
+          color: $colors-gray-100;
+          font-family: $fontFamily-Roboto;
+          font-weight: bold;
+          font-size: 1rem;
+          text-decoration: none;
+          &:hover {
+            color: $colors-gray-hover;
+          }
+          @media (min-width: 400px) and (max-width: 730px) {
+            font-size: 1rem;
+          }
+          @media (max-width: 400px) {
+            font-size: 0.8rem;
+          }
+        }
+      }
+      .ButtonBuscar {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: none;
+        border: none;
+        color: $colors-gray-100;
+        font-family: $fontFamily-Roboto;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover {
+          color: $colors-gray-hover;
+        }
+        @media (min-width: 200px) and (max-width: 730px) {
+          font-size: 1rem;
+        }
+        @media (max-width: 400px) {
+          font-size: 0.8rem;
+        }
+        &::after {
+          width: 2px;
+          height: 1.2rem;
+          background-color: $colors-violet-dark;
+          content: "";
+          display: flex;
+        }
+      }
+    }
+  }
+}

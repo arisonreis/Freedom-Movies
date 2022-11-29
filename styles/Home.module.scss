@@ -1,0 +1,65 @@
+@import "../styles/variables.module.scss";
+/*
+$colors-violet-light: #8257e5;
+$colors-violet-dark: #633bbc;
+$colors-gray-900: #1e1e1e;
+$colors-gray-100: #e1e1e1;
+$colors-gray-600: #353333de;
+$colors-gray-dark;
+$colors-red-defalt: #ea0000;
+$colors-green-default: #62e557;
+$colors-white: #ffff;
+$fontFamily-Roboto: "Roboto", sans-serif;
+$fontFamily-rigtheous-cursive: "Righteous", cursive;
+$fontFamily-rigtheous-sans-serif: "Roboto", sans-serif;
+*/
+.container {
+  height: auto;
+  width: 100%;
+  .Main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: calc(100% - 70px);
+    width: 100%;
+    .NewMovieContainer {
+      width: 90%;
+      @media (max-width:600px){
+        width: 100%;
+        height: 410px;
+      }
+      height: 510px;
+      .textCenterNewMovie {
+        margin-top: 1rem;
+        text-align: center;
+        color: $colors-gray-100;
+        font-family: $fontFamily-Roboto;
+        font-size: 1.7rem;
+        font-weight: bolder;
+      }
+      .AreaViewMore{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: end;
+        .LinkToRedirect{
+          color: $colors-violet-dark;
+          font-weight: bold;
+          font-family: $fontFamily-Roboto;
+          text-decoration: none;
+          margin-bottom: .2rem;
+          display: flex;
+          align-items: center;
+          gap: .2rem;
+        }
+      }
+      .Carrossel {
+        width: 100%;
+        height: 100%;
+        --swiper-navigation-color: #8257e5;
+        --swiper-pagination-color: #8257e5;
+        background-repeat:no-repeat;
+      }
+    }
+  }
+}
